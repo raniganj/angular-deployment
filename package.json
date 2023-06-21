@@ -1,10 +1,11 @@
 {
   "name": "angular-deployment",
   "version": "0.0.0",
+  "homepage": "https://raniganj.github.io/angular-deployment/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+		"build": "ng build --base-href=/angular-deployment/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
