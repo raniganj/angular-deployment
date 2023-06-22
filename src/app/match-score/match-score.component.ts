@@ -17,7 +17,6 @@ export class MatchScoreComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.subscribe((state)=>{
-      console.log(state)
       this.matchNumber = state.matchNumber
       this.matchScore = state.matchScore;
     })
