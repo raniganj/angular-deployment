@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
@@ -16,6 +17,8 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({
       matchNumber : matchNumberReducer,
       matchScore : matchScoreReducer
