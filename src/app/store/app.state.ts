@@ -1,7 +1,7 @@
 import { MatchScore } from "./matchScore.reducer";
 
 export interface MyAppState{
-  counter: number,
+  matchNumber: number,
   matchScore : MatchScore
 
 }

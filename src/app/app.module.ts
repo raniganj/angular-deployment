@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './store/counter.reducer';
+import { matchNumberReducer } from './store/counter.reducer';
 import { MatchScoreComponent } from './match-score/match-score.component';
 import { matchScoreReducer } from './store/matchScore.reducer';
 
@@ -15,7 +15,7 @@ import { matchScoreReducer } from './store/matchScore.reducer';
   imports: [
     BrowserModule,
     StoreModule.forRoot({
-      counter : counterReducer,
+      matchNumber : matchNumberReducer,
       matchScore : matchScoreReducer
     })
   ],

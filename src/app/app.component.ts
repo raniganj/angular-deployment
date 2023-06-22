@@ -10,21 +10,21 @@ import {MyAppState} from './store/app.state'
 })
 export class AppComponent implements OnInit{
   title = 'angular-deployment';
-  myCounter: number = 0;
+  myMatchNumber: number = 0;
 
   constructor(private store: Store<MyAppState>){}
 
   ngOnInit(): void {
     this.store.subscribe((state)=>{
-      this.myCounter = state.counter;
+      this.myMatchNumber = state.matchNumber;
     })
   }
 
-  increamentCounter(){
+  increamentMatchNumber(){
     this.store.dispatch(increament());
   }
 
-  decreamentCounter(){
+  decreamentMatchNumber(){
     this.store.dispatch(decrement());
   }
 }

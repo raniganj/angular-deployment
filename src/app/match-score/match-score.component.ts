@@ -10,12 +10,15 @@ import { MatchScore, cskScoreDecreament, cskScoreIncreament, mumbaiScoreDecreame
 })
 export class MatchScoreComponent implements OnInit {
 
+  matchNumber:number|undefined;
   matchScore:MatchScore|undefined;
 
   constructor( private store:Store<MyAppState>) { }
 
   ngOnInit(): void {
     this.store.subscribe((state)=>{
+      console.log(state)
+      this.matchNumber = state.matchNumber
       this.matchScore = state.matchScore;
     })
   }
