@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './store/counter.reducer';
 import { MatchScoreComponent } from './match-score/match-score.component';
+import { matchScoreReducer } from './store/matchScore.reducer';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MatchScoreComponent } from './match-score/match-score.component';
   imports: [
     BrowserModule,
     StoreModule.forRoot({
-      counter : counterReducer
+      counter : counterReducer,
+      matchScore : matchScoreReducer
     })
   ],
   providers: [],

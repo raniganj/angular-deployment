@@ -1,1 +1,15 @@
-<p>match-score works!</p>
+<div>
+  <h2>Welcome to Mumbai-CSK match summary</h2>
+  <h3>
+    Mumbai Score : {{matchScore?.mumbaiScore}}
+    <button type="button" class="ml-10 mr-10" (click)="mumbaiScoreIncreament()">Increament</button>
+    <button type="button" (click)="mumbaiScoreDecreament()">Decreament</button>
+
+  </h3>
+
+  <h3>
+    CSK Score : {{matchScore?.cskScore}}
+    <button type="button" class="ml-10 mr-10" (click)="cskScoreIncreament()">Increament</button>
+    <button type="button" (click)="cskScoreDecreament()">Decreament</button>
+  </h3>
+</div>

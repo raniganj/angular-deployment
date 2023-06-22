@@ -1,3 +1,7 @@
+import { MatchScore } from "./matchScore.reducer";
+
 export interface MyAppState{
-  counter: number
+  counter: number,
+  matchScore : MatchScore
+
 }

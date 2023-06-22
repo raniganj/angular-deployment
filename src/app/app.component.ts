@@ -16,7 +16,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.store.subscribe((state)=>{
-      console.log(state);
       this.myCounter = state.counter;
     })
   }
