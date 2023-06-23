@@ -4,25 +4,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { matchNumberReducer } from './store/counter.reducer';
 import { MatchScoreComponent } from './match-score/match-score.component';
-import { matchScoreReducer } from './store/matchScore.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { rootReducer } from './store/app.state';
+import { Page1Component } from './page1/page1.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MatchScoreComponent
+    MatchScoreComponent,
+    Page1Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({
-      matchNumber : matchNumberReducer,
-      matchScore : matchScoreReducer
-    }),
+    StoreModule.forRoot(rootReducer),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
