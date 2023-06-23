@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { MyAppState } from '../store/app.state';
-import { Module1User, module1Action1 } from '../store/module1.reducer';
+import { Module1User, module1Action1, module1Action2WithParam } from '../store/module1.reducer';
 
 @Component({
   selector: 'app-page1',
@@ -24,4 +24,7 @@ export class Page1Component implements OnInit {
     this.store.dispatch(module1Action1())
   }
 
+  module1Action2WithParam(){
+    this.store.dispatch(module1Action2WithParam({p1:20}))
+  }
 }

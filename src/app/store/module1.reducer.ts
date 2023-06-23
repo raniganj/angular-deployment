@@ -8,7 +8,7 @@ export interface Module1User{
 }
 
 export const module1Action1 = createAction('Module1 Action1');
-export const module1Action2 = createAction('Module1 Action2',
+export const module1Action2WithParam = createAction('Module1 Action2 with parameter',
   props<{p1:number}>()
 )
 
@@ -25,7 +25,7 @@ export const module1Reducer = createReducer(
     return {...state, counter: state.counter+1}
   }),
 
-  on(module1Action2, (state, {p1})=>{
+  on(module1Action2WithParam, (state, {p1})=>{
     return { ...state, counter: state.counter+p1}
   })
 )
